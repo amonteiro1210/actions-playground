@@ -21,11 +21,11 @@ jobs:
         run: date
         
   job3:
-    name: Data atual Macos
+    name: Data atual MacOs
     runs-on: macos-latest
     
     steps:
-      - name: Data atual
+      - name: Data atual MacOs
         run: date
 
   job4:
