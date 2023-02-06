@@ -1,0 +1,42 @@
+name: "Data atual"
+
+on:
+  push:
+  
+jobs:
+  job1:
+    name: Data atual Ubuntu
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Data atual
+        run: date
+        
+  job2:
+    name: Data atual Windows
+    runs-on: windows-latest
+    
+    steps:
+      - name: Data atual
+        run: date
+        
+  job3:
+    name: Data atual Macos
+    runs-on: macos-latest
+    
+    steps:
+      - name: Data atual
+        run: date
+
+  job4:
+    name: Data atual
+    runs-on: ubuntu-latest
+    needs:
+      - job1
+      - job2
+      - job3
+      
+    steps:
+      - name: Data atual
+        run: date
+
